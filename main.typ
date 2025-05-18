@@ -52,7 +52,7 @@
 //----------------------------------------------------------------------------//
 
 #show: BODY-MATTER.with(TEXT-SIZE, "Chapter", ship-part-page: false)
-
+#include "chapters/HardProb.typ"
 #include "chapters/ResearchPlan.typ"
 
 //----------------------------------------------------------------------------//

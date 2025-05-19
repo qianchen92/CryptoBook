@@ -20,4 +20,10 @@
 #proof[
   The proof consists of an explicit construction of the algorithm $StructTrapGen$ and a proof of correctness.
 
+  The algorithm $StructTrapGen$ works as follows:
+  #algo(title: "StructTrapGen", parameters: ($vmat(B)$, $vmat(u)_1, dots, vmat(u)_ell$))[
+    for $i$ in [$ell$] do #i\
+    $vmat(v)$ = $vmat(u)_i$ *mod* $q$ #d\
+    if
+  ]
 ]

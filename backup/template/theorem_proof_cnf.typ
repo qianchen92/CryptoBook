@@ -22,11 +22,15 @@
     v(5pt)
   }]
 
-#let __llncs-thm-styling = (thm-numbering: (fig) => {
-  if fig.numbering != none {
-    numbering(fig.numbering, ..fig.counter.at(fig.location()))
-  }
-}, thm-styling: __llncs_thm_style, proof-styling: __llncs_thm_proof_style)
+#let __llncs-thm-styling = (
+  thm-numbering: fig => {
+    if fig.numbering != none {
+      numbering(fig.numbering, ..fig.counter.at(fig.location()))
+    }
+  },
+  thm-styling: __llncs_thm_style,
+  proof-styling: __llncs_thm_proof_style,
+)
 
 #let __llncs_thm_cnf() = {
   let thm = default-theorems("llcns-thm-group", lang: "en", ..__llncs-thm-styling)

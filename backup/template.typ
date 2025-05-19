@@ -1,5 +1,4 @@
 #import "template/theorem_proof_cnf.typ": *
-
 // all theorem related elements
 #let (
   theorem,
@@ -83,7 +82,9 @@
 
   //// HEADING CONFIGS
   set heading(numbering: "1.1")
-  show heading: it => if it.numbering == none { it } else { block(counter(heading).display(it.numbering) + h(1em) + it.body) }
+  show heading: it => if it.numbering == none { it } else {
+    block(counter(heading).display(it.numbering) + h(1em) + it.body)
+  }
   // padding
   show heading.where(level: 1): pad.with(bottom: 0.64em, top: 0.64em)
   show heading.where(level: 2): pad.with(bottom: 0.9em)

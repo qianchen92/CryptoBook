@@ -1,16 +1,19 @@
-#import "template.typ": *
+#import "backup/template.typ": *
 
-#let inst_princ = institute("Princeton University", 
-  addr: "Princeton NJ 08544, USA"
+#let inst_princ = institute(
+  "Princeton University",
+  addr: "Princeton NJ 08544, USA",
 )
-#let inst_springer = institute("Springer Heidelberg", 
-  addr: "Tiergartenstr. 17, 69121 Heidelberg, Germany", 
+#let inst_springer = institute(
+  "Springer Heidelberg",
+  addr: "Tiergartenstr. 17, 69121 Heidelberg, Germany",
   email: "lncs@springer.com",
-  url: "http://www.springer.com/gp/computer-science/lncs"
+  url: "http://www.springer.com/gp/computer-science/lncs",
 )
-#let inst_abc = institute("ABC Institute", 
-  addr: "Rupert-Karls-University Heidelberg, Heidelberg, Germany", 
-  email: "{abc,lncs}@uni-heidelberg.de"
+#let inst_abc = institute(
+  "ABC Institute",
+  addr: "Rupert-Karls-University Heidelberg, Heidelberg, Germany",
+  email: "{abc,lncs}@uni-heidelberg.de",
 )
 
 
@@ -18,15 +21,18 @@
   title: "Contribution Title",
   thanks: "Supported by organization x.",
   authors: (
-    author("First Author", 
+    author(
+      "First Author",
       insts: (inst_princ),
       oicd: "0000-1111-2222-3333",
     ),
-    author("Second Author", 
+    author(
+      "Second Author",
       insts: (inst_springer, inst_abc),
       oicd: "1111-2222-3333-4444",
     ),
-    author("Third Author", 
+    author(
+      "Third Author",
       insts: (inst_abc),
       oicd: "2222-3333-4444-5555",
     ),
@@ -36,7 +42,7 @@
     15--250 words.
   ],
   keywords: ("First keyword", "Second keyword", "Another keyword"),
-  bibliography: bibliography("refs.bib")
+  bibliography: bibliography("refs.bib"),
 )
 
 
@@ -73,9 +79,10 @@ $ x + y = z $
 Please try to avoid rasterized images for line-art diagrams and schemas. When-
 ever possible, use vector graphics instead (see @image_fig).
 
-#figure(caption: [A figure caption is always placed below the illustration. Please note that short
-captions are centered, while long ones are justified by the macro package automatically.],
-image("fig1.svg")
+#figure(
+  caption: [A figure caption is always placed below the illustration. Please note that short
+    captions are centered, while long ones are justified by the macro package automatically.],
+  image("fig1.svg"),
 ) <image_fig>
 
 
@@ -83,4 +90,4 @@ image("fig1.svg")
 
 #proof[Proofs, examples, and remarks have the initial word in italics, while the following text appears in normal font.]
 
-For citations of references, we prefer the use of square brackets and consecutive numbers. Citations using labels or the author/year convention are also acceptable. The following bibliography provides a sample reference list with entries for journal articles 
+For citations of references, we prefer the use of square brackets and consecutive numbers. Citations using labels or the author/year convention are also acceptable. The following bibliography provides a sample reference list with entries for journal articles

@@ -1,2 +1,4 @@
 
-#let to = $arrow$ 
+#let to = $arrow$
+#let gets = $arrow.l$
+#let getsr = $attach(<-, t: "$")$

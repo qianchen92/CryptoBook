@@ -53,6 +53,7 @@
 //----------------------------------------------------------------------------//
 
 #show: BODY-MATTER.with(TEXT-SIZE, "Chapter", ship-part-page: false)
+#set par(first-line-indent: 15pt)
 #include "chapters/HardProb.typ"
 #include "chapters/primitives.typ"
 #include "chapters/ResearchPlan.typ"

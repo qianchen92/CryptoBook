@@ -16,3 +16,17 @@
 ]<def:HomEnc>
 
 *Remarks:* The homomorphic encoding $HomEnc$ is actually used in the construction of $ABE$ schemes.
+== Zero-Knowledge Proofs
+=== Hidden Bits Generator
+
+#definition("Hidden Bits Generator " + cite(label("STOC:Waters24")))[
+  A hidden bits generator $protHBG$ consists of three $ppt$ algorithms $protHBG = (Gen, GenBits, Verif)$ with the following syntax:
+  - $Gen(secparam, k) to crs$: Takes a security parameter $lambda$ and a length $k$ as input, and outputs a common reference string $crs$.
+  - $GenBits(crs) to (com, vmat(r), (pi_1, dots, pi_k))$: Takes a common reference string $crs$ as input, and outputs a commitment $com$, a vector $vmat(r) in {0,1}^k$, and a vector of $k$ bit-commitments $(pi_1, dots, pi_k)$.
+  - $Verif(crs, com, i, beta, pi) to {0,1}$: Takes a common reference string $crs$, a commitment $com$, an index $i in [k]$, a bit $beta in {0,1}$ and a proof $pi$ as input, and outputs a bit $b in {0,1}$.
+  We require that the following properties hold:
+  - *Correctness:* For all $lambda,k in NN$ and all indices $i in [k]$ we have
+  $
+    Pr[Verif(crs, com, i, vmat(r)_i, pi_i) = 1 | ()]
+  $
+]

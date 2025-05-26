@@ -16,7 +16,45 @@
 ]<def:HomEnc>
 
 *Remarks:* The homomorphic encoding $HomEnc$ is actually used in the construction of $ABE$ schemes.
+
 == Zero-Knowledge Proofs
+
+=== Hash Proof System
+
+#definition("Hash Proof System " + cite(label("C:CraSho98")))[
+  A hash proof system $hps$ consists of three $ppt$ algorithms $hps = (Setup, Prove, Verif)$ with the following syntax:
+  - $Setup(secparam) to hk$: Takes a security parameter $lambda$ and a language $lang$ as input, and outputs a hash key $hk$.
+  - $KGen(hk, lang, stmt) to pk$: Takes a hash key $hk$ and a language $lang$ as input, and outputs a projection key $pk$.
+  - $Hash(hk, stmt) to hash$: Takes a hash key $hk$, and a statement $stmt$ as input, and outputs a hash $hash$.
+  - $ProjHash(pk, stmt, wit) to hash$: Takes a projection key $pk$, a statement $stmt$ and a witness $wit$ as input, and outputs a hash $hash$.
+
+  We require the following properties:
+  - *Statement Independent:* A word independent hash function $Hash$ is a $hps$ with statement independent $KGen(hk, lang) to pk$ algorithm#footnote[The original Crammer-Shoup is actually statement independent.].
+  - *Approximate Correctness* For all security parameter $secpar$, and hash space $hSpace = {0,1}^hSpaceSize$ we have
+  $
+    Pr[HW(Hash(hk, stmt, wit), ProjHash(pk, stmt)) > epsilon dot hSpaceSize] = negl.
+  $
+  - *Smoothness (Universality):* For all security parameter $secpar$, for all statement outside the language $stmt in stmtSpace backslash lang$, the following distributions are statistically close:
+  $
+    {(stmt, pk, hash) mid(|) #grid(
+        columns: 1,
+        align: left,
+        gutter: 5pt,
+        $hk getsr Setup(secparam)$,
+        $pk getsr KGen(hk, lang, stmt)$,
+        $hash getsr Hash(hk, stmt)$,
+      )},\
+    {(stmt, pk, hash) mid(|) #grid(
+        columns: 1,
+        align: left,
+        gutter: 5pt,
+        $hk getsr Setup(secparam)$,
+        $pk getsr KGen(hk, lang, stmt)$,
+        $hash getsr Unif({0,1})$,
+      )}.
+  $
+]
+
 === Hidden Bits Generator
 
 #definition("Hidden Bits Generator " + cite(label("STOC:Waters24")))[
@@ -27,6 +65,14 @@
   We require that the following properties hold:
   - *Correctness:* For all $lambda,k in NN$ and all indices $i in [k]$ we have
   $
-    Pr[Verif(crs, com, i, vmat(r)_i, pi_i) = 1 | ()]
+    Pr[Verif(crs, com, i, vmat(r)_i, pi_i) = 1 mid(|) #grid(
+        columns: 1,
+        align: center,
+        gutter: 5pt,
+        $crs getsr Setup;$,
+        $(com, vmat(r), (pi_1, dots, pi_k)) getsr GenBits(crs)$,
+      )] = 1.
   $
+
 ]
+

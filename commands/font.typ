@@ -1,6 +1,7 @@
 //fonts
-#let algfont(x) = math.sans(math.upright(x))
-#let varfont(x) = math.sans(math.upright(x))
+#let algfont(x) = math.upright(x)
+#let varfont(x) = math.upright(x)
+#let setfont(x) = math.cal(math.upright(x))
 #let notionfont(x) = math.sans(math.upright(x))
 #let vmat(x) = math.bold(math.upright(x))
 #let bmat(..args) = math.mat(delim: "[", ..args)

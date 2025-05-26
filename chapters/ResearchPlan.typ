@@ -13,3 +13,11 @@
   - Paper: @EC:WatWeeWu25
   - Contributions:
 
+- DualMS: Efficient Lattice-Based Two-Round Multi-Signature with Trapdoor-Free Simulation
+  - Paper: @C:Chen23
+
+- DOTT lattice-based Multi-Signature
+  - Paper: @PKC:DOTT21 and @JC:DOTT22
+
+- MuSig-L
+  - Paper: @C:BosTakTib22

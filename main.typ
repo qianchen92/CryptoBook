@@ -57,6 +57,7 @@
 #include "chapters/HardProb.typ"
 #include "chapters/primitives.typ"
 #include "chapters/ResearchPlan.typ"
+#include "chapters/notes.typ"
 
 //----------------------------------------------------------------------------//
 //                                  APPENDIX                                  //

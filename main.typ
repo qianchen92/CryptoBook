@@ -46,7 +46,12 @@
 
 = Contents
 
-#outline(title: none, target: heading.where(level: 1), indent: auto)
+#outline(
+  title: none,
+  //target: heading.where(level: 1),
+  depth: 2,
+  indent: auto,
+)
 
 //----------------------------------------------------------------------------//
 //                                BODY-MATTER                                 //
@@ -54,6 +59,7 @@
 
 #show: BODY-MATTER.with(TEXT-SIZE, "Chapter", ship-part-page: false)
 #set par(first-line-indent: 15pt)
+#include "chapters/foundation.typ"
 #include "chapters/HardProb.typ"
 #include "chapters/primitives.typ"
 #include "chapters/ResearchPlan.typ"

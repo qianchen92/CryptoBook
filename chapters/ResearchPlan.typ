@@ -21,3 +21,10 @@
 
 - MuSig-L
   - Paper: @C:BosTakTib22
+
+== Hardness of Learning with Errors with different rounding functions (Ongoing)
+
+=== References
+
+- Classical Hardness of Learning with Errors
+  - Paper: @STOC:BLPRS13

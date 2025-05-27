@@ -2,6 +2,20 @@
 
 = Hard Problems
 == Lattice-based Hard Problems
+=== Classical Lattice Problems
+
+#definition($SVP$)[
+  The _minimum distance_ of a lattice $lattice$ is defined as
+  $
+    lambda_1(lattice) = min_(vmat(x) in lattice backslash {0}) ||vmat(x)||.
+  $
+  The _shortest vector problem_ (SVP) is to find a non-zero vector $vmat(x) in lattice$ such that $||vmat(x)|| = lambda_1(lattice)$.
+
+]
+
+#definition($GSVP_gamma$)[
+  For an approximate ratio $gamma = gamma(n) >=1$, the _gap shortest vector problem_ ( $GSVP_gamma$ ) is to find a non-zero vector $vmat(x) in lattice$ such that $||vmat(x)|| <= gamma dot lambda_1(lattice)$.
+]
 
 === Shifted Multi-Preimage Sampling
 
@@ -11,7 +25,7 @@
   Let $lambda$ be a security parameter and $n = n(lambda)$, $m = m(lambda)$ and $q = q(lambda)$ be lattice parameters. Suppose $m >= n ceil(log q)$. Then for all $ell in NN$, and $t = m ceil(log ell)$, there exists an explicit polynomial-time algorithm $StructTrapGen$ such that
   - $StructTrapGen(vmat(B), (vmat(u)_1, dots, vmat(u)_ell)) to TrapT$: Takes a matrix $vmat(B) in ZZ_q^(n times t)$ and distinct vectors $vmat(u)_1 dots vmat(u)_ell in {0,1}^(ceil(log ell))$ as input, and outputs a a gadget trapdoor $TrapT in ZZ_q^((ell t +m) times ell m)$ where $||TrapT|| = 1$ for the matrix
     $
-      vmat(D)'_ell = bmat(vmat(B)- vmat(u)_1^trans times.circle vmat(G), , , vmat(G); , dots.down, , dots.v; , , vmat(B)- vmat(u)_ell^trans, vmat(G))
+      vmat(D)'_ell = bmat(vmat(B)- vmat(u)_1^trans times.circle vmat(G), , , vmat(G); , dots.down, , dots.v; , , vmat(B)- vmat(u)_ell^trans times.circle vmat(G), vmat(G))
     $
 ]
 

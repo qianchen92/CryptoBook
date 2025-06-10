@@ -13,8 +13,17 @@
 
 ]
 
-#definition($GSVP_gamma$)[
-  For an approximate ratio $gamma = gamma(n) >=1$, the _gap shortest vector problem_ ( $GSVP_gamma$ ) is to find a non-zero vector $vmat(x) in lattice$ such that $||vmat(x)|| <= gamma dot lambda_1(lattice)$.
+#definition("search " + $GSVP_gamma$)[
+  For an approximate ratio $gamma = gamma(n) >=1$, the search version of _gap shortest vector problem_ ($GSVP_gamma$) is to find a non-zero vector $vmat(x) in lattice$ such that $||vmat(x)|| <= gamma dot lambda_1(lattice)$.
+]
+
+#definition("decision " + $GSVP_gamma$)[
+  For an approximate ratio $gamma = gamma(n) >=1$, given $d in [0, +infinity)$ the decision version of _gap shortest vector problem_ ($GSVP_gamma$) is to decide whether $lambda_1(Lambda) in [0, d]$ or $lambda_1(Lambda) in [gamma dot d, +infinity)$.
+]
+
+#definition($LWE$)[
+  For a prime number $q in ZZ$, two integers $n,m in ZZ_q$, such that $m = BigO(n log q)$, given a matrix $vmat(A) in ZZ_q^(m times n)$, sample a small error vector $vmat(e)$ from a Gaussian distribution $Dist_sigma$ of standard derivation $sigma$, uniformly sample a vector $vmat(u) in ZZ_q^n$, the following two distributions are computationally indistinguishable:
+  - $(vmat(A), vmat(b) = vmat(A)vmat(s) + vmat(e))$ and $(vmat(A), vmat(u))$.
 ]
 
 === Shifted Multi-Preimage Sampling

@@ -41,9 +41,17 @@
 + Worst-Case to Average-Case Reductions for Module Lattices
   - Authors: @DCC:LanSte15
   - Contribution: First worst-case to average-case reduction for the module learning with errors problem. This reduction is *not sample-preserving*.
++ Random Self-Reducibility of the Ideal-$SVP$ problem
+  - References: @C:BDPW20
+  - Contribution: They use the random walk technique over the Arakelov group.
+
 
 #pagebreak()
 == Extendable Inner-Product Functional Encryption and its Applications to Searchable Encryption (Ongoing)
 
 #pagebreak()
-== Efficient Dual-Mode Commitments and Lattice-based Zero-Knowledge Proofs(Ongoing)
+== Efficient Dual-Mode Commitments and Lattice-based Zero-Knowledge Proofs (Ongoing)
+
+
+=== References
+- @AC:ZCYW23: Generic framework for constructing $Sigma$-protocol from non-interactive VSS protocols.

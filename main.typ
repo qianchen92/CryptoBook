@@ -95,4 +95,3 @@ The following is the _auto-generated_, self bibliography database entry for the 
     #self-bib
   ]
 ]
-

@@ -1,5 +1,7 @@
 #import "../../commands/commands.typ": *
 
+
+
 == Lattice
 
 #definition("Lattice")[

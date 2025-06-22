@@ -1,4 +1,5 @@
 #import "font.typ": *
+#let LWR = notionfont[LWR]
 #let LWE = notionfont[LWE]
 #let RLWE = notionfont[RLWE]
 #let MLWE = notionfont[MLWE]

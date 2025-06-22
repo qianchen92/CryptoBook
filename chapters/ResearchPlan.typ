@@ -3,25 +3,47 @@
 = Research Plans
 == Lattice-based Tightly-Secure Multi-Signatures (Ongoing)
 
-=== Maybe useful refereneces
-- Lattice-based Signatures with Tight Adaptive Corruptions and More
+=== Maybe useful references
++ Lattice-based Signatures with Tight Adaptive Corruptions and More
   - Paper: @PKC:PanWag22
   - Contributions: They construct the first lattice-based signature scheme with tight security against adaptive corruption.
     The construction is based on the standard $LWE$ assumption. The key caveat is that in bothe the $RLWE$ and $MLWE$ settings,
     the scheme is not tightly secure against adaptive corruption.
-- New Techniques for Preimage Sampling: Improved NIZKs and More from LWE
++ New Techniques for Preimage Sampling: Improved NIZKs and More from LWE
   - Paper: @EC:WatWeeWu25
   - Contributions:
 
-- DualMS: Efficient Lattice-Based Two-Round Multi-Signature with Trapdoor-Free Simulation
++ DualMS: Efficient Lattice-Based Two-Round Multi-Signature with Trapdoor-Free Simulation
   - Paper: @C:Chen23
 
-- DOTT lattice-based Multi-Signature
++ DOTT lattice-based Multi-Signature
   - Paper: @PKC:DOTT21 and @JC:DOTT22
 
-- MuSig-L
++ MuSig-L
   - Paper: @C:BosTakTib22
 
+=== General Ideas
+The principle idea is to start with the hash-and-sign paradigm, and then try to aggregate the signatures.
+
+The main technique is the relinearization technique for the quadratic terms in the signature construction.
+
+=== Contribution and Objectives
+
++ First single-round lattice-based multi-signature scheme from $MLWE$ assumption.
+  - Main selling point: efficiency
+  - Try to compare with other schemes.
+  - Possible collaborator:
+    - Hao Chen (For implementation)
++ First tightly-secure lattice-based multi-signature scheme.
+  - Main selling point: tight security against adaptive corruption.
+  - From the $LWE$ assumption, we can prove the tight security against adaptive corruption in the multi-user multi-challenge setting.
+  - Possible collaborator:
+    - Quan Yuan (For QROM security)
++ Most efficient lattice-based threshold signature scheme.
+  - Main selling point: efficient threshold signature scheme.
+  - Need to use other threshold signature techniques.
+  - Possible collaborator:
+    - Puwen Wei or Zengpeng Li (For threshold signature techniques)
 #pagebreak()
 == Hardness of Learning with Errors with different rounding functions (Ongoing)
 
@@ -44,6 +66,8 @@
 + Random Self-Reducibility of the Ideal-$SVP$ problem
   - References: @C:BDPW20
   - Contribution: They use the random walk technique over the Arakelov group.
++ Middle-Product Learning with Errors
+
 
 
 #pagebreak()
@@ -73,3 +97,46 @@
 - @AC:ZCYW23: Generic framework for constructing $Sigma$-protocol from non-interactive VSS protocols.
 - @PKC:PanWag22: Lattice-based signature scheme with tight security against adaptive corruption.
   - In this paper, their main contribution is to give a construction of a dual-mode trapdoor commitment.
+
+
+#pagebreak()
+== Lattice-based efficient PRF (Ongoing)
+- @EC:BanPeiRos12: Lattice-based PRF construction based on the hardness of the Learning with Errors problem.
+
+== Basic constructions
+
+- OK...This result is based on the learning with rounding problem.
+
+=== Synthesizer
+
+- De-randomization of $LWE$ instances.
+  - $LWR$ problem?
+
+
+#pagebreak()
+
+== Lattice-based vector commitment schemes (Ongoing)
+
+=== Intuitions
+
+The $Sigma$-protocol given by @AC:ZCYW23 is a very good candidate for constructing a vector commitment scheme.
+
+
+#pagebreak()
+
+== PSI protocols (Ongoing)
+
+=== References
+- @EC:vBaPu24: A PSI protocol based on the hardness of DDH problem.
+
+
+#pagebreak()
+
+== Tightly-secure Multi-User Signatures in the quantum random oracle model (Ongoing)
+
+=== References
+- @PKC:PanWag22: Lattice-based signature scheme with tight security against adaptive corruption.
+
+== Open problem:
+
+Give a proof in the quantum random oracle model.

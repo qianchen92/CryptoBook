@@ -1,6 +1,6 @@
 // #import "@preview/lyceum:0.1.0": FRONT-MATTER
 #import "commands/commands.typ": *
-#import "@preview/lyceum:0.1.0": FRONT-MATTER, BODY-MATTER, APPENDIX, BACK-MATTER
+#import "@preview/lyceum:0.1.0": APPENDIX, BACK-MATTER, BODY-MATTER, FRONT-MATTER
 #show: thmrules.with(qed-symbol: $square$)
 #show link: underline
 

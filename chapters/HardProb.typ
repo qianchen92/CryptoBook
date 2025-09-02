@@ -60,11 +60,12 @@
     vmat(B)- vmat(u)_1^trans times.circle vmat(G), , , vmat(G); , dots.down, , dots.v; , , vmat(B)- vmat(u)_ell^trans times.circle vmat(G), vmat(G)
   )$. Namely, we need to show that
   $
-    vmat(D_ell)'vmat(T) &= bmat(
-      vmat(B)- vmat(u)_1^trans times.circle vmat(G), , , vmat(G); , dots.down, , dots.v; , , vmat(B)- vmat(u)_ell^trans times.circle vmat(G), vmat(G)
-    ) bmat(
-      -vmat(H)_(vmat(B), vmat(u)_1, vmat(u)_1), dots.h, -vmat(H)_(vmat(B), vmat(u)_ell, vmat(u)_1); dots.v, dots.down, dots.v; -vmat(H)_(vmat(B), vmat(u)_1, vmat(u)_ell), dots.h, -vmat(H)_(vmat(B), vmat(u)_ell, vmat(u)_ell); vmat(G)^(-1)(vmat(B)_(vmat(u)_1)), dots.h, vmat(G)^(-1)(vmat(B)_(vmat(u)_ell))
-    ) \ &= bmat(vmat(G), , ; , dots.down, ; , , vmat(G))
+    vmat(D_ell)'vmat(T) & = bmat(
+                            vmat(B)- vmat(u)_1^trans times.circle vmat(G), , , vmat(G); , dots.down, , dots.v; , , vmat(B)- vmat(u)_ell^trans times.circle vmat(G), vmat(G)
+                          ) bmat(
+                            -vmat(H)_(vmat(B), vmat(u)_1, vmat(u)_1), dots.h, -vmat(H)_(vmat(B), vmat(u)_ell, vmat(u)_1); dots.v, dots.down, dots.v; -vmat(H)_(vmat(B), vmat(u)_1, vmat(u)_ell), dots.h, -vmat(H)_(vmat(B), vmat(u)_ell, vmat(u)_ell); vmat(G)^(-1)(vmat(B)_(vmat(u)_1)), dots.h, vmat(G)^(-1)(vmat(B)_(vmat(u)_ell))
+                          ) \
+                        & = bmat(vmat(G), , ; , dots.down, ; , , vmat(G))
   $
 
   Using the definition of homomorphic encoding in @def:HomEnc, the correctness of the algorithm $StructTrapGen$ is straightforward.

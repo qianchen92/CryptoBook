@@ -7,3 +7,27 @@
 
 #let example = thmplain("example", "Example").with(numbering: none)
 #let proof = thmproof("proof", "Proof")
+
+// Remark with attention icon
+#let remark(body) = {
+  block(
+    fill: rgb("#fff4e6"),
+    stroke: rgb("#ff9800") + 1pt,
+    radius: 3pt,
+    inset: 1em,
+    breakable: true,
+    [
+      #grid(
+        columns: (auto, 1fr),
+        column-gutter: .8em,
+        align: (horizon),
+        [
+          #image("../assets/attention.png", width: 3em, height: 3em)
+        ],
+        [
+          #thmbox("remark", "Remark")(body)
+        ],
+      )
+    ],
+  )
+}

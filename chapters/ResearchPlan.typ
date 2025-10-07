@@ -1,7 +1,7 @@
 #import "../commands/commands.typ": *
 
 = Research Plans
-== Lattice-based Tightly-Secure Multi-Signatures (Ongoing)
+== Lattice-based Tightly-Secure Multi-Signatures (Half-way)
 
 === Maybe useful references
 + Lattice-based Signatures with Tight Adaptive Corruptions and More
@@ -23,9 +23,12 @@
   - Paper: @C:BosTakTib22
 
 === General Ideas
-The principle idea is to start with the hash-and-sign paradigm, and then try to aggregate the signatures.
 
-The main technique is the relinearization technique for the quadratic terms in the signature construction.
+- The principle idea is to start with the hash-and-sign paradigm, and then try to aggregate the signatures.
+
+- #strike[The main technique is the relinearization technique for the quadratic terms in the signature construction.]
+
+- Replace the dual-mode trapdoor commitment in @EC:PanWag23, @EC:PanWag24 with a parallel-OR proof. This is because the parallel-OR is more suitable for the case where the first-round message is not fixed. #strong[#text(red)[Pilaf paper: submitted to Eurocrypt 2026.]]
 
 === Contribution and Objectives
 
@@ -137,6 +140,17 @@ The $Sigma$-protocol given by @AC:ZCYW23 is a very good candidate for constructi
 === References
 - @PKC:PanWag22: Lattice-based signature scheme with tight security against adaptive corruption.
 
-== Open problem:
+=== Open problem:
 
 Give a proof in the quantum random oracle model.
+
+#pagebreak()
+
+== Matroid Theory (Ongoing)
+
+#pagebreak()
+
+== Formal Verfication of Cryptographic Protocols (Ongoing)
+
+=== References
+- @EPRINT:StePaiDil25: Automated Verification of Consistency in Zero-Knowledge Proof Circuits

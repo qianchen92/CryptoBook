@@ -1,6 +1,13 @@
 #import "../commands/commands.typ": *
 
 = Research Plans
+== Adaptively-Secure Proxy Re-Encryption (Somewhat finished)
+
+=== Contributions
+
+
+#pagebreak()
+
 == Lattice-based Tightly-Secure Multi-Signatures (Half-way)
 
 === Maybe useful references
@@ -32,11 +39,6 @@
 
 === Contribution and Objectives
 
-+ First single-round lattice-based multi-signature scheme from $MLWE$ assumption.
-  - Main selling point: efficiency
-  - Try to compare with other schemes.
-  - Possible collaborator:
-    - Hao Chen (For implementation)
 + First tightly-secure lattice-based multi-signature scheme.
   - Main selling point: tight security against adaptive corruption.
   - From the $LWE$ assumption, we can prove the tight security against adaptive corruption in the multi-user multi-challenge setting.
@@ -48,6 +50,82 @@
   - Possible collaborator:
     - Puwen Wei or Zengpeng Li (For threshold signature techniques)
 #pagebreak()
+
+
+
+
+== Efficient Dual-Mode Commitments and Lattice-based Zero-Knowledge Proofs (Somewhat finished)
+
+
+=== References
+- @AC:ZCYW23: Generic framework for constructing $Sigma$-protocol from non-interactive VSS protocols.
+- @PKC:PanWag22: Lattice-based signature scheme with tight security against adaptive corruption.
+  - In this paper, their main contribution is to give a construction of a dual-mode trapdoor commitment.
+
+=== Results
+- #text(red)[Pilaf: submitted to Eurocrypt 2026.]
+
+
+#pagebreak()
+
+
+== Lattice-based vector commitment schemes (Ongoing)
+
+=== Intuitions
+
+The $Sigma$-protocol given by @AC:ZCYW23 is a very good candidate for constructing a vector commitment scheme.
+
+
+#pagebreak()
+
+
+
+== Matroid Theory and MPC Lower Bounds (Ongoing)
+
+#pagebreak()
+
+== Formal Verfication of Cryptographic Protocols (Ongoing)
+
+=== References
+- @CAV:StePaiDil25 Automated Verification of Consistency in Zero-Knowledge Proof Circuits
+
+Other papers in POPL, CAV, CCS, S&P etc.
+
+
+=== Ideas
+Give a general framework for verifying the UC framework of cryptographic protocols.
+
+
+
+#pagebreak()
+== Unified Framework for Rejection Sampling and Pre-Image Sampling (Ongoing)
+
+
+= Pre-mature Ideas
+
+== PSI protocols (Ongoing)
+
+=== References
+- @EC:vBaPu24: A PSI protocol based on the hardness of DDH problem.
+
+
+#pagebreak()
+
+== Lattice-based efficient PRF (Ongoing)
+- @EC:BanPeiRos12: Lattice-based PRF construction based on the hardness of the Learning with Errors problem.
+
+=== Basic constructions
+
+- OK...This result is based on the learning with rounding problem.
+
+=== Synthesizer
+
+- De-randomization of $LWE$ instances.
+  - $LWR$ problem?
+
+
+#pagebreak()
+
 == Hardness of Learning with Errors with different rounding functions (Ongoing)
 
 === References
@@ -56,24 +134,7 @@
   - Paper: @STOC:BLPRS13
 
 #pagebreak()
-== Hardness of Module Learning with Errors with sample-preserving worst case to average case reduction. (Ongoing)
 
-=== References
-
-+ Worst-Case to Average-Case Reductions Based on Gaussian Measures
-  - Authors: @FOCS:MicReg04
-  - Contribution: First worst-case to average-case reduction for the learning with errors problem. This reduction is *sample-preserving*.
-+ Worst-Case to Average-Case Reductions for Module Lattices
-  - Authors: @DCC:LanSte15
-  - Contribution: First worst-case to average-case reduction for the module learning with errors problem. This reduction is *not sample-preserving*.
-+ Random Self-Reducibility of the Ideal-$SVP$ problem
-  - References: @C:BDPW20
-  - Contribution: They use the random walk technique over the Arakelov group.
-+ Middle-Product Learning with Errors
-
-
-
-#pagebreak()
 == Broadcast Encryption with Keyword Search (Ongoing)
 
 === References
@@ -93,64 +154,22 @@
 
 
 #pagebreak()
-== Efficient Dual-Mode Commitments and Lattice-based Zero-Knowledge Proofs (Ongoing)
 
-
-=== References
-- @AC:ZCYW23: Generic framework for constructing $Sigma$-protocol from non-interactive VSS protocols.
-- @PKC:PanWag22: Lattice-based signature scheme with tight security against adaptive corruption.
-  - In this paper, their main contribution is to give a construction of a dual-mode trapdoor commitment.
-
-
-#pagebreak()
-== Lattice-based efficient PRF (Ongoing)
-- @EC:BanPeiRos12: Lattice-based PRF construction based on the hardness of the Learning with Errors problem.
-
-== Basic constructions
-
-- OK...This result is based on the learning with rounding problem.
-
-=== Synthesizer
-
-- De-randomization of $LWE$ instances.
-  - $LWR$ problem?
-
-
-#pagebreak()
-
-== Lattice-based vector commitment schemes (Ongoing)
-
-=== Intuitions
-
-The $Sigma$-protocol given by @AC:ZCYW23 is a very good candidate for constructing a vector commitment scheme.
-
-
-#pagebreak()
-
-== PSI protocols (Ongoing)
+== Hardness of Module Learning with Errors with sample-preserving worst case to average case reduction. (Ongoing)
 
 === References
-- @EC:vBaPu24: A PSI protocol based on the hardness of DDH problem.
+
++ Worst-Case to Average-Case Reductions Based on Gaussian Measures
+  - Authors: @FOCS:MicReg04
+  - Contribution: First worst-case to average-case reduction for the learning with errors problem. This reduction is *sample-preserving*.
++ Worst-Case to Average-Case Reductions for Module Lattices
+  - Authors: @DCC:LanSte15
+  - Contribution: First worst-case to average-case reduction for the module learning with errors problem. This reduction is *not sample-preserving*.
++ Random Self-Reducibility of the Ideal-$SVP$ problem
+  - References: @C:BDPW20
+  - Contribution: They use the random walk technique over the Arakelov group.
++ Middle-Product Learning with Errors
 
 
-#pagebreak()
-
-== Tightly-secure Multi-User Signatures in the quantum random oracle model (Ongoing)
-
-=== References
-- @PKC:PanWag22: Lattice-based signature scheme with tight security against adaptive corruption.
-
-=== Open problem:
-
-Give a proof in the quantum random oracle model.
-
-#pagebreak()
-
-== Matroid Theory (Ongoing)
 
 #pagebreak()
-
-== Formal Verfication of Cryptographic Protocols (Ongoing)
-
-=== References
-- @EPRINT:StePaiDil25: Automated Verification of Consistency in Zero-Knowledge Proof Circuits

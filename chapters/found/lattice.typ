@@ -1,7 +1,7 @@
 #import "../../commands/commands.typ": *
 
 
-
+#pagebreak()
 == Lattice
 
 #definition("Lattice")[
@@ -13,7 +13,7 @@
   $
 ]
 
-== Gaussian Measures
+=== Gaussian Measures
 
 #definition("Gaussian Measure")[
   For $r >0$, the $n$-dimensional Gaussian function $rho_r: RR^n to (0,1]$ is defined as
@@ -42,7 +42,7 @@
   If we take the characteristic function of the distribution $Dist_(vmat(B)_1), Dist_(vmat(B)_2)$. Then, we take the product of the characteristic functions, to see the proof
 ]
 
-== Useful Lemmas
+=== Useful Lemmas
 
 The following lemma reveals the relation between the smoothing parameter of the lattice and the shortest vector of its dual lattice.
 #lemma("Smoothing Parameter and Shortest Vector of Dual Lattice")[
@@ -53,7 +53,7 @@ The following lemma reveals the relation between the smoothing parameter of the 
 ]
 
 
-== Reductions
+=== Reductions
 
 We will show in this section several reductions between lattice problems.
 

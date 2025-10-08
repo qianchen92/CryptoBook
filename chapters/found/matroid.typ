@@ -1,11 +1,13 @@
 #import "../../commands/commands.typ": *
 
 
+= Matroid
+== Basic definitions
 
-== Matroid
+We survey the several equivalent definition of matroid.
 
 #definition("Matroid")[
-  A _matroid_ is a pair $Var(M) = (Var(E), Var(I))$ where $Var(E)$ is a finite set, and $Var(I) subset.eq Set(P)(Var(E))$ is a family of subsets of $Var(E)$, called the _independent sets_, satisfying the following properties:
+  A *matroid* is an ordered pair $Var(M) = (Var(E), Var(I))$ where $Var(E)$ is a finite set, and $Var(I) subset.eq Set(P)(Var(E))$ is a family of subsets of $Var(E)$, called the *independent sets*, satisfying the following properties:
   1. The empty set is independent, i.e.,
   $
     emptyset in Var(I).
@@ -14,12 +16,19 @@
   $
     forall Var(A),Var(B): Var(A) in Var(I) and Var(B) subset.eq Var(A) ==> Var(B) in Var(I).
   $
-  this property is called _hereditary property_.
+  this property is called *hereditary property*.
   3. If $Var(A)$ and $Var(B)$ are two independent sets and $|Var(A)| > |Var(B)|$, then there exists an element $x in Var(A) without Var(B)$ such that $Var(B) union {x} in Var(I)$, i.e.,
   $
     forall Var(A),Var(B): Var(A),Var(B) in Var(I) and |Var(A)| > |Var(B)| ==> exists x in Var(A) without Var(B): Var(B) union {x} in Var(I),
   $
-  this property is called _exchange property_.]
+  this property is called *exchange property*.]
+
+We also have some notations:
+- If $Var(M)$ is the matroid $(Var(E), Var(I))$, then $Var(M)$ is called *a matroid on* $Var(E)$.
+- The members of $Var(I)$ are the *independent sets* of $Var(M)$.
+- The set $Var(E)$ is the *ground set* of $Var(M)$.
+- We denote by $Var(I)(Var(M))$ and $Var(E)(Var(M))$ for $Var(I)$ and $Var(E)$ respectively.
+
 #definition("Basis")[
   A _basis_ of  a matroid is a maximal independent set. All bases of a matroid have the same size, called the _rank_ of the matroid.]
 #remark[
